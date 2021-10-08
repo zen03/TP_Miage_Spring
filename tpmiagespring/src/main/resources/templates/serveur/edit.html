@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Edit</title>
+		<link rel= "stylesheet" type="text/css" th:href="@{../css/bootstrap.min.css}" />
+	</head>
+	<body>
+		<div class="container">
+			<div class="panel panel-info">
+				<div class="panel-heading">Liste des serveurs</div>
+				<div class="panel-body">
+					<form method="POST" th:action="@{/Serveur/update}" th:object="${serveur}">
+						<div class="form-group">
+							<label class="control-label">Identifiant du serveur</label>
+							<input class="form-control" type="text" name="id" th:field="*{id}" />
+						</div>
+						<div class="form-group">
+							<label class="control-label">Nom du serveur</label>
+							<input class="form-control" type="text" name="nomServ" th:field="*{nomServ}" />
+						</div>
+						<div class="form-group">
+							<label class="control-label">Adresse ip du serveur</label>
+							<input class="form-control" type="text" name="adripServ" th:field="*{adripServ}" />
+						</div>
+						<div class="form-group">
+							<input class="btn btn-success" type="submit" name="valider" value="Valider" />
+							<input class="btn btn-danger" type="reset" name="annuler" value="Annuler" />
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

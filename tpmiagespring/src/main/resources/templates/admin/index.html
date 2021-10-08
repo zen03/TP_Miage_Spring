@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Accueil</title>
+		<link rel= "stylesheet" type="text/css" th:href="@{../css/bootstrap.min.css}" />
+	</head>
+	<body>
+		<div class="nav navbar-default"> 
+			<ul class="nav navbar-nav">
+				<li><a th:href="@{/}">Accueil</a></li>
+				<li><a th:href="@{/Serveur/liste}">Gestion des serveurs</a></li>
+				<li><a th:href="@{/Service/liste}">Gestion des services</a></li>
+			</ul>
+		</div>
+	</body>
+</html>
